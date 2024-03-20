@@ -1,4 +1,6 @@
 ---
+// Supports weights 300-800
+import '@fontsource-variable/open-sans';
 interface Props {
 	title: string;
 }
@@ -16,36 +18,32 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body >
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+	
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: 'Open Sans Variable', sans-serif;
+ 		background: #030303;
+		color: azure;
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+		overflow-x: hidden;
+        scroll-behavior: smooth;
+		}
+	        /* Estilos para el ícono */
+			#favicon {
+            width: 100px; /* ajusta el ancho del ícono */
+            height: auto; /* altura automática para mantener la proporción */
+        }
+		/* Estilos para la imagen */
+        .profile-img {
+            width: 200px; /* ajusta el ancho de la imagen */
+            height: auto; /* altura automática para mantener la proporción */
+            border-radius: 50%; /* bordes redondeados para crear un efecto circular */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* sombra */
+            border: 2px solid #fff; /* borde blanco */
+        }
+
 </style>

@@ -1,0 +1,218 @@
+---
+interface Props {
+  title: string;
+  href_img: string;
+  href_link?: string;
+}
+const { title, href_link, href_img } = Astro.props;
+---
+
+<slot>
+<!--   <li
+    class=" ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl"
+  >
+    
+  </li> -->
+  <li class="card w-full h-[26rem] ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl mb-8 sm:mb-72">
+    <div class="content rounded-3xl">
+      <div class="back rounded-3xl">
+        <div class="back-content rounded-3xl">
+          <div
+      class=" h-full w-full p-8 ring-1 ring-white/10 rounded-2xl lg:p-4 shadow-massive bg-card/80 "
+    >
+      <div class="flex flex-col justify-between h-full ">
+        <div>
+          <div class="flex-shrink-0 block">
+            <div class="flex flex-col items-center justify-center">
+              <div class="pb-4">
+                <p class="text-3xl text-[#ffffff98]">{title}</p>
+              </div>
+              <img
+                class="inline-block w-full h-48 sm:h-60 shrink-0"
+                src={href_img}
+                alt="image project"
+              />
+            </div>
+          </div>
+        </div>
+     <!--    <a
+          href={href_link}
+          class="rounded-lg ml-1 px-7 py-6 text-lg transition-all flex items-center justify-center text-white bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] h-10 ring-1 ring-inset ring-white/10"
+          >view project</a
+        > -->
+        <a href={href_link} class="cssbuttons-io-button" target="_blank">
+          View Project
+          <div class="icon">
+            <svg
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</slot>
+
+<style>
+  .card {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 400ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+   /*  border-radius: 5px; */
+  }
+
+  .front,
+  .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* border-radius: 5px; */
+    overflow: hidden;
+  }
+
+  .back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .back:hover::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #c4c8cd,
+      #c4c8cd,
+      #c4c8cd,
+      #c4c8cd,
+      transparent
+    );
+    animation: rotation_481 5000ms infinite linear;
+  }
+
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #151515;
+    /* border-radius: 5px; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+/*   .card:hover .content {
+    transform: rotateY(180deg);
+  } */
+
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .cssbuttons-io-button {
+  background: #030303;
+  color: #8f9194;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #8f8f8f;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: #030303;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #8f8f8f;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #8f8f8f;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+</style>

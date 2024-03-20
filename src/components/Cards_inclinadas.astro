@@ -1,0 +1,29 @@
+---
+interface Props {
+  Technology: string;
+
+}
+const {Technology} = Astro.props;
+---
+<li
+class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl shadow-[#8f8f8f] hover:animate-jiggle"
+>
+<div
+  class="h-full p-8 ring-1 ring-white/10 rounded-2xl lg:p-6 shadow-massive bg-card/80 "
+>
+  <div class="flex flex-col justify-between h-auto">
+    <div class="flex-shrink-0 block mt-2">
+      <div class="flex items-center justify-center">
+        <div>
+          <p class="text-3xl pb-6 text-gray-300 text-center">{Technology}</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-sm text-vanta-300">
+      <ul>
+        <slot></slot>
+      </ul>
+    </div>
+  </div>
+</div>
+</li>

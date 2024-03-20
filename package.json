@@ -1,5 +1,5 @@
 {
-  "name": "astrobuild-tips",
+  "name": "portafolio-astro-marcos",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,14 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.6",
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/mdx": "^2.2.0",
+    "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.4.13",
+    "@fontsource-variable/open-sans": "^5.0.28",
+    "@fontsource/lato": "^5.0.20",
+    "@midudev/tailwind-animations": "^0.0.7",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "astro": "^4.5.6",
+    "package": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.4",
-    "prettier-plugin-astro": "^0.8.0"
   }
 }

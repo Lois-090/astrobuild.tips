@@ -1,0 +1,58 @@
+---
+import Cards_project from "../../components/Cards_project.astro";
+---
+
+<section
+  class="fondo relative px-8 py-10 mx-auto md:px-12 lg:px-32 max-w-7xl lg:pt-56 lg:pb-20"
+>
+  <div id="project" class="flex justify-start p-7 w-full">
+    <h1
+      class="pt-28 text-shadow-glow xs:text-fluid-base z-20 max-w-[20ch] animate-fade-up text-center sm:text-6xl text-[35px] font-semibold leading-none"
+    >
+      <span
+        class="bg-clip-text text-transparent pb-2 bg-gradient-to-r from-[#e8b066] to-[#df12ff]"
+        >Projects</span
+      >
+    </h1>
+  </div>
+  <ol
+    role="list"
+    class="flex flex-col justify-center sm:grid gap-4 mt-12 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3"
+  >
+    <Cards_project
+      title="Portfolio"
+      ,
+      href_img="/983shots_so.png",
+      href_link="https://github.com/SantiAlfonso375/portafolio_astro_build"
+    />
+    <Cards_project
+      title=""
+      ,
+      href_img="",
+      href_link=""
+    />
+    <Cards_project
+      title=""
+      ,
+      href_img="",
+      href_link=""
+    />
+  </ol>
+</section>
+
+<style>
+  .fondo {
+    /*  background: rgb(87, 87, 87);
+    background: radial-gradient(
+      circle,
+      rgba(87, 87, 87, 1) 0%,
+      rgba(3, 3, 3, 1) 40%
+    ); */
+    background: rgb(87, 87, 87);
+    background: radial-gradient(
+      circle,
+      rgba(87, 87, 87, 1) 0%,
+      rgba(3, 3, 3, 0) 40%
+    );
+  }
+</style>
