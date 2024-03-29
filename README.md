@@ -10,7 +10,7 @@ npm create astro@latest -- --template basics
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://github.com/Marco-Anonimous/astrobuild.tips-master.git)
+[![fate.png](https://i.postimg.cc/W12LWCvR/fate.png)](https://postimg.cc/JGd2tT0K)
 
 ## 🚀 Project Structure
 
