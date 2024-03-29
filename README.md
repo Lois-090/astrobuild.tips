@@ -10,7 +10,7 @@ npm create astro@latest -- --template basics
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://master--marcosantonioferr.netlify.app/)
+![just-the-basics](https://github.com/Marco-Anonimous/astrobuild.tips-master.git)
 
 ## 🚀 Project Structure
 
